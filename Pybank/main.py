@@ -53,11 +53,11 @@ greatest_decrease_profits = min(monthly_changes)
 
 print(monthly_change_profit)
 print(f"total months:{total_months}")
-print(f"total net:{total_net}")
+print(f"total net:${total_net}")
 print(f"average change profits:{average_change_profits}")
 #print(f"average change losses:{average_change_losses}")
-print(f"greatest increase profits:{greatest_increase_profits}")
-print(f"greatest decrease profits:{greatest_decrease_profits}")
+print(f"greatest increase profits:${greatest_increase_profits}")
+print(f"greatest decrease profits:${greatest_decrease_profits}")
 # print(f"increase date:{increase_date}")
 # print(f"decrease date:{decrease_date}")
 
@@ -73,9 +73,9 @@ f"""
 Financial Analysis
 -----------------------------
 Total months:{total_months}
-Total net:{total_net}
-Greatest increase profits:{greatest_increase_profits}
-Greatest decrease profits:{greatest_decrease_profits}
+Total net:${total_net}
+Greatest increase profits:${greatest_increase_profits}
+Greatest decrease profits:${greatest_decrease_profits}
 
 """
 
