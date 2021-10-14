@@ -1,7 +1,7 @@
 import os
 import csv
-filepath = "/Users/gurbindesidhu/Desktop/Pythonhomework/pythonchallenges/Pybank.py/Resources/budget_data.csv"
-#filepath = "./Resources/budget_data.csv"
+#filepath = "/Users/gurbindesidhu/Desktop/Pythonhomework/pythonchallenges/Pybank.py/Resources/budget_data.csv"
+filepath = "./Resources/budget_data.csv"
 profit = []
 monthly_changes = []
 date = []
@@ -42,13 +42,7 @@ with open(filepath) as csv_file:
           initial_profit = final_profit
 average_change_profits = (total_change_profits/(count))
           
-        #   total_loss = total_loss + int(row[1])
-        #   final_loss=int(row[1])
-        #   monthly_change_loss=final_loss - initial_loss
-        #   monthly_changes.append(monthly_change_loss)
-        #   total_change_losses=total_change_losses + monthly_change_loss
-        #   initial_loss = final_loss
-        #   average_change_losses = (total_change_losses/count)
+        
           
           #average_change=average_change_profits-average_change_losses
 greatest_increase_profits = max(monthly_changes)
@@ -72,3 +66,17 @@ print(f"greatest decrease profits:{greatest_decrease_profits}")
     # track net change
     # Greatest increase
     # greatest decrease  
+File_to_write = "./analysis/budget_data.txt" 
+with open(File_to_write,"w") as f:
+        f.write(
+f"""
+Financial Analysis
+-----------------------------
+Total months:{total_months}
+Total net:{total_net}
+Greatest increase profits:{greatest_increase_profits}
+Greatest decrease profits:{greatest_decrease_profits}
+
+"""
+
+        )

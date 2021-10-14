@@ -15,6 +15,7 @@ candidate_name=0
 winning_count=0
 #voter_output=[]
 
+
 #def vote_percent(candidate_name):
 
 with open(filepath,newline='') as csv_file:
@@ -36,6 +37,8 @@ with open(filepath,newline='') as csv_file:
         else:
             vote_count[candidate_name] = vote_count[candidate_name] + 1
     # print(vote_count)
+
+with open(filepathout,"w") as txt_file:
     for candidate in vote_count:
         votes=vote_count.get(candidate)
         vote_percent= (float(votes)/float(count))*100
@@ -43,7 +46,7 @@ with open(filepath,newline='') as csv_file:
             winning_count=votes
             winning_candidate= candidate
         voter_output= f"{candidate}:{vote_percent:3f}% ({votes})\n"
-
+        txt_file.write(voter_output)
         print(voter_output)             
    
     Election_Results = (
@@ -60,11 +63,18 @@ with open(filepath,newline='') as csv_file:
     winning_candidate_summary =(
     f"-------------------------\n"
     f"Winner:{winning_candidate}\n" 
-    f"---------------------------\n")
+    # f"---------------------------\n"
+    # f"Each Candidate vote:{}"
+    )
+
+    # print(voter_output)
+    
+
     print(winning_candidate_summary)
 
  #Creating output file:
-with open(filepathout,"w") as txt_file:
+# with open(filepathout,"w") as txt_file:
+
 
     
     txt_file.write(Election_Results)

@@ -1,0 +1,8 @@
+
+Financial Analysis
+-----------------------------
+Total months:86
+Total net:38382578
+Greatest increase profits:1926159
+Greatest decrease profits:-2196167
+
